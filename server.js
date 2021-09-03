@@ -27,7 +27,7 @@ server.use(cors());
 
 // server.get("/", (req, res) => {
 // });
-server.post("/", (req,res)=> res.json("it's working"));
+server.post("/", (req,res)=> res.send("it's working"));
 server.post("/login", login.handleLogin(db, bcrypt));
 server.post("/register",(req, res)=>{ register.handleRegister(req, res, db, bcrypt)});
 server.get("/profile/:id", (req, res)=>{profile.handleProfile(req, res, db)});
