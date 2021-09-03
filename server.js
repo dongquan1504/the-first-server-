@@ -36,5 +36,5 @@ server.put("/image", (req, res)=>{ image.handleImage(req, res, db)});
 server.post("/imageUrl", (req, res)=>{ image.handleClarifai(req, res)});
 
 server.listen(process.env.PORT || 3000, () => {
-  console.log('app is using at port ${process.env.PORT}');
+  console.log(`app is using at port ${process.env.PORT}`);
 });
